@@ -1,0 +1,66 @@
+# Optional config file for the theme.
+
+# Variables that are in this file, can be used in your twig template like {{ theme.foo }}
+
+# Template filenames. If you 're creating a theme for distribution, you can specify
+# the filenames of the templates here. The templates you will set in this config
+# file will override the ones in the global app/config/config.yml, so beware!
+# maintenance_template: maintenance_default.twig
+# homepage_template: index.twig
+# record_template: record.twig
+# listing_template: listing.twig
+# search_results_template: search.twig
+# notfound: notfound.twig
+
+
+# publishing date and taxonomies can be shown right under the records title in
+# listings and their pages.
+# we can control for which contenttypes (their slugs) creation date is shown
+# and which taxonomies are shown (so we can use some taxonomies for internal
+# stuff, but dont show them to the visitors)
+# also see _recordinfos.twig
+show_publishdate: ['entries', 'posts', 'photos']
+shown_taxonomies:
+  'tags':
+    show_groupname: false
+    single_prefix: '#'
+    separator: ''
+  'categories':
+    show_groupname: false
+    single_prefix: '@'
+    separator: ''
+
+# shall the copyright notice be shown on sidebar?
+show_copyright_in_sidebar: false
+
+# some layout Variables
+sticky_sidebar: true
+reverse_layout: false
+
+# color themes, uncomment one
+#color_theme: 'base-08'
+#color_theme: 'base-09'
+#color_theme: 'base-0a'
+#color_theme: 'base-0b'
+#color_theme: 'base-0c'
+#color_theme: 'base-0d'
+#color_theme: 'base-0e'
+#color_theme: 'base-0f'
+
+# theme for highlingthing code blocks, see https://highlightjs.org/static/demo/
+# for previews of all supported themes
+highlight_theme: 'dracula'
+
+# Aliases can be set to restrict images to a specific set of available
+# resolutions or to decouple image sizes from template files.
+thumbnails:
+    aliases:
+        thumb_250w:
+          size: [250,250]
+          cropping: crop
+        thumb_350w:
+            size: [350,350]
+            cropping: crop
+        thumb_450w:
+            size: [450,450]
+            cropping: crop

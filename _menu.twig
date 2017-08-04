@@ -1,0 +1,8 @@
+<nav class="sidebar-nav">
+  {% for item in menu %}
+  <a class="sidebar-nav-item{% if item|current %} active{% endif %}"
+      href="{{ item.link }}">
+      {{ item.label }}
+  </a>
+  {% endfor %}
+</nav>

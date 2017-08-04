@@ -1,0 +1,43 @@
+{# This file is inserted as the 'info' of each listed record and inside the record #}
+
+{# show publishing date for certain contenttypes
+   can be defined in theme.yml #}
+{% if record.contenttype.slug in theme.show_publishdate %}
+  {{ record.datepublish|localedatetime("%d.%m.%Y") }}
+{% endif %}
+
+{% if record.taxonomy is defined %}
+  {% for type, values in record.taxonomy %}
+    {% if theme.shown_taxonomies[type] is defined %}
+      {% if theme.shown_taxonomies[type].show_groupname %}
+        <em>
+        {% if values|length < 2 %}
+          {{ config.get('taxonomy')[type].singular_name }}:
+        {% else %}
+          {{ config.get('taxonomy')[type].name }}:
+        {% endif %}
+        </em>
+      {% endif %}
+
+      {% for link, value in values %}
+        <a href="{{ link }}">
+          {{ theme.shown_taxonomies[type].single_prefix }}{{ value }}
+        </a>
+        {% if not loop.last %}
+          {{ theme.shown_taxonomies[type].separator }}
+        {% endif %}
+      {% else %}
+        {% if theme.shown_taxonomies[type].show_groupname %}
+          {{ __('none') }}
+        {% endif %}
+      {% endfor %}
+
+    {% endif %}
+
+  {% endfor %}
+{% endif %}
+
+
+{% if extended|default() %}
+         - <a href="{{ record.link() }}">{{ __('general.phrase.permalink') }}</a> -
+{% endif %}

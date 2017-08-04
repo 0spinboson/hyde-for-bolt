@@ -1,0 +1,35 @@
+{% extends 'record.twig' %}
+
+{% block recordcontent %}
+    {% for ct in config.get('contenttypes') if not ct.viewless|default(false) %}
+        {% setcontent records = ct.slug ~ "/latest/3" %}
+
+        <div class="latest">
+          <h2>
+            {{ __('contenttypes.generic.recent', {'%contenttypes%': ct.name}) }}
+          </h2>
+          <ul class="latest-posts">
+            {% for record in records %}
+              <li>
+                <h3>
+                  <a href="{{ record.link }}">
+                    {{ record.title }}
+                    <small>{{ record.datepublish|localedatetime("%d.%m.%Y") }}</small>
+                  </a>
+                </h3>
+              </li>
+            {% else %}
+              <li>{{ __('contenttypes.generic.no-recent', {'%contenttype%': ct.slug}) }}</li>
+            {% endfor %}
+              <li>
+                <h3>
+                  <a href="{{ path('contentlisting', {'contenttypeslug': ct.slug}) }}">
+                    {{ __('contenttypes.generic.overview',{'%contenttypes%': ct.name}) }}
+                    <small>&raquo;</small>
+                  </a>
+                </h3>
+              </li>
+          </ul>
+        </div>
+    {% endfor %}
+{% endblock recordcontent %}
