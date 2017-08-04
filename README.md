@@ -5,7 +5,7 @@ uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll bu
 
 This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+![hyde-for-bolt-01](https://user-images.githubusercontent.com/7450884/28960604-a62ac4ea-78ff-11e7-830f-5eff2b994056.png)
 
 
 ## Contents
