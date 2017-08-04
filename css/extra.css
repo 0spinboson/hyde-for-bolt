@@ -1,3 +1,21 @@
+/*
+ *  __                  __
+ * /\ \                /\ \
+ * \ \ \___   __  __   \_\ \     __
+ *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+ *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+ *    \ \_\ \_\/`____ \ \___,_\ \____\
+ *     \/_/\/_/`/___/> \/__,_ /\/____/
+ *                /\___/
+ *                \/__/       for Bolt
+ *
+ * Hyde was designed, built, and released under MIT license by @mdo.
+ * Learn more at https://github.com/poole/hyde.
+ *
+ * Some additional CSS-Rules are required for the Bolt port.
+ */
+
+ /* clickable excerpt in listings */
 a.readmore,
 .post-date a{
   color: inherit;
@@ -12,15 +30,17 @@ a:hover.readmore{
   color: #888;
 }
 
+/* remove pading from pre */
 pre{
   padding: 0;
 }
 
+/* remove round corners from images */
 img{
   border-radius: 0px;
 }
 
-/* Related posts */
+/* styling for related posts - insprired by latest post styling */
 .latest {
   padding-top: 2rem;
   padding-bottom: 2rem;
