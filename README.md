@@ -19,6 +19,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [Galleries](#galleries)
   - [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
   - [Code highlighting](#code-highlighting)
+  - [Maintenance Text](#maintenance -text)
 - [License](#license)
 
 
@@ -76,6 +77,11 @@ Code blocks are highlighted using [highlight.js](https://highlightjs.org/),
 the theme used for highlighting can be defined in `theme.yml` by setting the
 `highlight_theme` variable (use only lowercase!), see the [highlight.js demo page](https://highlightjs.org/static/demo/)
 for previews of the different themes.
+
+### Maintenance Text
+
+To set an individual title and content of your Maintenance-Site, just create `block/maintenance`
+(it has to have exactly this slug) and set title and content there.
 
 
 ## License
