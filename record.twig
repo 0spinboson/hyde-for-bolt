@@ -21,9 +21,16 @@
       {% if record.gallery %}
         <div class="thumbs">
         {% for image in record.gallery %}
+
             {% set fn = image['filename'] %}
-            <a  href="{{ image(image) }}">
+            {% if record.show_gallery_captions %}
+                {% set caption = image.title %}
+            {% else %}
+                {% set caption = "" %}
+            {% endif %}
+            <a  href="{{ asset(image.filename, 'files') }}" title="{{ caption }}">
                 <img src="{{ fn|thumbnail('thumb_350w') }}"
+                    alt="{{ caption }}"
                     srcset="{{ fn|thumbnail('thumb_250w') }} 250w,
                     {{ fn|thumbnail('thumb_350w') }} 350w,
                     {{ fn|thumbnail('thumb_450w') }} 450w">
@@ -39,10 +46,10 @@
                 quitOnEnd:      false,                  // bool;            quit after viewing the last image
                 quitOnImgClick: false,                  // bool;            quit when the viewed image is clicked
                 quitOnDocClick: true,                   // bool;            quit when anything but the viewed image is clicked
-                onStart:        function(){overlayOn(); },                  // function/bool;   calls function when the lightbox starts
-                onEnd:          function(){overlayOff(); },                 // function/bool;   calls function when the lightbox quits
-                onLoadStart:    false,                  // function/bool;   calls function when the image load begins
-                onLoadEnd:      false                   // function/bool;   calls function when the image finishes loading
+                onStart:        function(){ overlayOn(); },                 // function/bool;   calls function when the lightbox starts
+                onEnd:          function(){ overlayOff(); captionOff(); },  // function/bool;   calls function when the lightbox quits
+                onLoadStart:    function(){ captionOff(); },                // function/bool;   calls function when the image load begins
+                onLoadEnd:      function(){ captionOn(); }                  // function/bool;   calls function when the image finishes loading
             });
         </script>
       {% endif %}

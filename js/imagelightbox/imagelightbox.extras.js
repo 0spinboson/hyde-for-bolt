@@ -5,9 +5,19 @@ function overlayOn(){
 function overlayOff(){
     $( '#imagelightbox-overlay' ).remove();
 }
-function activityIndicatorOn(){ 
+function activityIndicatorOn(){
     $( '<div id="imagelightbox-loading"><div></div></div>' ).appendTo( 'body' );
 }
 function activityIndicatorOff(){
     $( '#imagelightbox-loading' ).remove();
+}
+
+function captionOn(){
+    var description = $( 'a[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"] img' ).attr( 'alt' );
+    if( description && description.length > 0 ){
+        $( '<div id="imagelightbox-caption">' + description + '</div>' ).appendTo( 'body' );
+    }
+}
+function captionOff(){
+    $( '#imagelightbox-caption' ).remove();
 }

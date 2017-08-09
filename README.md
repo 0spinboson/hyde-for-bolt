@@ -62,6 +62,9 @@ Hyde for Bolt supports galleries - to use them just add a field `gallery` with `
 [ImageLightbox](https://osvaldas.info/image-lightbox-responsive-touch-friendly)
 is used as lightbox for the gallery images.
 
+Captions for galleries can be shown optionally, to manage this behavior add a field
+`show_gallery_captions` with `type: checkbox` to your contenttype.
+
 ### Optional publishing date and taxonomies
 
 You can define for which ContentTypes the publishing date will be displayed by
