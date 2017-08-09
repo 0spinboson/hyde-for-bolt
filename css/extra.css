@@ -17,8 +17,7 @@
 
  /* clickable excerpt in listings */
 a.readmore,
-.post-date a,
-.post-title a{
+.post-date a{
   color: inherit !important;
 }
 
