@@ -79,7 +79,7 @@ the theme used for highlighting can be defined in `theme.yml` by setting the
 `highlight_theme` variable (use only lowercase!), see the [highlight.js demo page](https://highlightjs.org/static/demo/)
 for previews of the different themes.
 
-### Maintenance Text
+### Maintenance text
 
 To set an individual title and content of your Maintenance-Site, just create `block/maintenance`
 (it has to have exactly this slug) and set title and content there.
