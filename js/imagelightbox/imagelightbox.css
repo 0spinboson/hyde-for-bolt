@@ -30,3 +30,49 @@
     bottom: 0;
     padding: 0.625em; /* 10 */
 }
+
+/*
+ * Themes (similar to sidebar and links)
+ */
+
+/* Base16 (http://chriskempson.github.io/base16/#default) */
+
+/* Red */
+.theme-base-08 #imagelightbox-caption{
+    background-color: #ac4142;
+}
+
+/* Orange */
+.theme-base-09 #imagelightbox-caption {
+    background-color: #d28445;
+}
+
+/* Yellow */
+.theme-base-0a #imagelightbox-caption {
+    background-color: #f4bf75;
+}
+
+/* Green */
+.theme-base-0b #imagelightbox-caption {
+    background-color: #90a959;
+}
+
+/* Cyan */
+.theme-base-0c #imagelightbox-caption {
+    background-color: #75b5aa;
+}
+
+/* Blue */
+.theme-base-0d #imagelightbox-caption {
+    background-color: #6a9fb5;
+}
+
+/* Magenta */
+.theme-base-0e #imagelightbox-caption {
+    background-color: #aa759f;
+}
+
+/* Brown */
+.theme-base-0f #imagelightbox-caption {
+    background-color: #8f5536;
+}
