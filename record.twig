@@ -46,6 +46,15 @@
             });
         </script>
       {% endif %}
+
+      {% if record.copyright and record.copyright != "" %}
+        <dl class="copyright">
+            <dt>©</dt>
+            <dd>
+                {{ record.copyright|markdown }}
+            </dd>
+        </div>
+      {% endif %}
   {% endblock recordcontent %}
 </div>
 

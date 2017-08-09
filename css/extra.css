@@ -134,3 +134,13 @@ img{
         -ms-filter: grayscale(0%);
             filter: grayscale(0%);
 }
+
+/* copyright notice */
+.copyright{
+    font-size: 70%;
+    padding-top: 1rem;
+}
+.copyright dt{
+    display: inline;
+    float: left;
+}

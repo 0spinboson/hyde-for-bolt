@@ -20,6 +20,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
   - [Code highlighting](#code-highlighting)
   - [Maintenance Text](#maintenance -text)
+  - [Copyright notice](#copyright-notice)
 - [License](#license)
 
 
@@ -82,6 +83,12 @@ for previews of the different themes.
 
 To set an individual title and content of your Maintenance-Site, just create `block/maintenance`
 (it has to have exactly this slug) and set title and content there.
+
+### Copyright notice
+
+If you regularly use content which needs a copyright notice, just add a field
+`copyright` with `type: html` or `type:markdown` to your contenttype. The notice
+will be added below your content, and below the gallery (if there is one).
 
 
 ## License
