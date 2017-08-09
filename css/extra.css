@@ -17,8 +17,9 @@
 
  /* clickable excerpt in listings */
 a.readmore,
-.post-date a{
-  color: inherit;
+.post-date a,
+.post-title a{
+  color: inherit !important;
 }
 
 .post-date a{
@@ -27,7 +28,7 @@ a.readmore,
 
 a:hover.readmore{
   text-decoration: none;
-  color: #888;
+  color: #888 !important;
 }
 
 /* remove pading from pre */
