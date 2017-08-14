@@ -19,7 +19,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [Galleries](#galleries)
   - [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
   - [Code highlighting](#code-highlighting)
-  - [Maintenance Text](#maintenance -text)
+  - [Maintenance Text](#maintenance-text)
   - [Copyright notice](#copyright-notice)
 - [License](#license)
 
