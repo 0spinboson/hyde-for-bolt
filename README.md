@@ -34,6 +34,9 @@ applied via `theme.yml` file.
 The `main` menu is used for the sidebar, you can adjust it in
 the `config://menu.yml` file.
 
+You can show a very basic search-box as the last item of the menu,
+to enable it set `show_search_in_menu: true` in `theme.yml`.
+
 You can show a copyright notice for your site at the bottom of the sidebar,
 to enable it set `show_copyright_in_sidebar: true` in `theme.yml`.
 

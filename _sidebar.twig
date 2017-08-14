@@ -1,23 +1,24 @@
 <div class="sidebar">
-  <div class="container {% if theme.sticky_sidebar %}sidebar-sticky{% endif %}">
-    <div class="sidebar-about">
-      <h1>
-        <a href="{{ path('homepage') }}">
-          {{ config.get('general/sitename') }}
-        </a>
-      </h1>
-      <span class="lead">
-      {% if config.get('general/payoff') %}
-          {{ config.get('general/payoff')|markdown }}
-      {% endif %}
-      </span>
-    </div>
+    <div class="container {% if theme.sticky_sidebar %}sidebar-sticky{% endif %}">
+        <div class="sidebar-about">
+            <h1>
+                <a href="{{ path('homepage') }}">
+                    {{ config.get('general/sitename') }}
+                </a>
+            </h1>
+            <span class="lead">
+                {% if config.get('general/payoff') %}
+                    {{ config.get('general/payoff')|markdown }}
+                {% endif %}
+            </span>
+        </div>
 
-    {% block menu %}
-      {{ menu('main', '_menu.twig') }}
-    {% endblock menu %}
-    {% if theme.show_copyright_in_sidebar %}
-      <p>&copy; {{ 'now'|date('Y') }}. All rights reserved.</p>
-    {% endif %}
-  </div>
+        {% block menu %}
+            {{ menu('main', '_menu.twig') }}
+        {% endblock menu %}
+        {% if theme.show_copyright_in_sidebar %}
+            <p>&copy;
+                {{ 'now'|date('Y') }}. All rights reserved.</p>
+        {% endif %}
+    </div>
 </div>

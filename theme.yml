@@ -30,6 +30,9 @@ shown_taxonomies:
     single_prefix: '@'
     separator: ''
 
+# shall a search box be shown as last item of the menu?
+show_search_in_menu: false
+
 # shall the copyright notice be shown on sidebar?
 show_copyright_in_sidebar: false
 

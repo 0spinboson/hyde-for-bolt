@@ -190,3 +190,23 @@ input:focus {
     border-color: #888;
     outline: 0;
 }
+
+/* search in sidebar */
+#searchform-sidebar input{
+    color: #fff;
+    border: 0px solid;
+    border-bottom: 1px solid rgba(255,255,255,.5);;
+    border-radius: 0px;
+    text-align: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    padding: 0px;
+    max-width: 150px;
+}
+#searchform-sidebar input:focus{
+    border-bottom: 1px solid #fff;
+}
+#searchform-sidebar button{
+    display: none;
+}
