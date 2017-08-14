@@ -6,11 +6,11 @@
           {{ config.get('general/sitename') }}
         </a>
       </h1>
-      <p class="lead">
+      <span class="lead">
       {% if config.get('general/payoff') %}
           {{ config.get('general/payoff')|markdown }}
       {% endif %}
-      </p>
+      </span>
     </div>
 
     {% block menu %}
