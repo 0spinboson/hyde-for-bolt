@@ -34,6 +34,9 @@ applied via `theme.yml` file.
 The `main` menu is used for the sidebar, you can adjust it in
 the `config://menu.yml` file.
 
+You can show a copyright notice for your site at the bottom of the sidebar,
+to enable it set `show_copyright_in_sidebar: true` in `theme.yml`.
+
 ### Sticky sidebar content
 
 By default Hyde for Bolt ships with a sidebar that affixes it's content to the
