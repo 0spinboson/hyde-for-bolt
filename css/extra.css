@@ -114,11 +114,11 @@ img{
     width: 100%;
     max-width: 100%;
 
-    -webkit-filter:     grayscale(100%);
-    -moz-filter:        grayscale(100%);
-    -o-filter:          grayscale(100%);
-    -ms-filter:         grayscale(100%);
-    filter:             grayscale(100%);
+    -webkit-filter:     saturate(100%);
+    -moz-filter:        saturate(100%);
+    -o-filter:          saturate(100%);
+    -ms-filter:         saturate(100%);
+    filter:             saturate(100%);
 
     -webkit-transition: all 0.5s ease;
     -moz-transition:    all 0.5s ease;
@@ -128,11 +128,11 @@ img{
 }
 
 .thumbs a img:hover, .indexthumbs a img:hover {
-    -webkit-filter: grayscale(0%);
-       -moz-filter: grayscale(0%);
-         -o-filter: grayscale(0%);
-        -ms-filter: grayscale(0%);
-            filter: grayscale(0%);
+    -webkit-filter: saturate(150%);
+       -moz-filter: saturate(150%);
+         -o-filter: saturate(150%);
+        -ms-filter: saturate(150%);
+            filter: saturate(150%);
 }
 
 /* copyright notice */
