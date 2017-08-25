@@ -63,12 +63,22 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
   <!-- imagelightbox -->
   {% if record.gallery %}
     <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script language="javascript" type="text/javascript" src="{{ asset('js/imagelightbox/imagelightbox.min.js', 'theme') }}"></script>
     <script language="javascript" type="text/javascript" src="{{ asset('js/imagelightbox/imagelightbox.extras.js', 'theme') }}"></script>
     <link rel="stylesheet" href="{{ asset('js/imagelightbox/imagelightbox.css', 'theme') }}" />
+  {% endif %}
+
+  <!-- gpx tracks, leaflet -->
+  {% if record.gpx %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.3.1/gpx.min.js"></script>
   {% endif %}
 
   <!-- RSS -->

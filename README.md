@@ -17,6 +17,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [Reverse layout](#reverse-layout)
 - [Features](#features)
   - [Galleries](#galleries)
+  - [GPX tracks](#gpx-tracks)
   - [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
   - [Code highlighting](#code-highlighting)
   - [Maintenance Text](#maintenance-text)
@@ -70,6 +71,21 @@ is used as lightbox for the gallery images.
 
 Captions for galleries can be shown optionally, to manage this behavior add a field
 `show_gallery_captions` with `type: checkbox` to your contenttype.
+
+### GPX tracks
+
+If you regularly publish gpx tracks with your posts, you can add a field `gpx` with
+`type: file` to your contenttype.
+You also have to extend `accept_file_types` in `config.yml` to accept `gpx`-files
+in order to be able to upload your tracks.
+If a nonempty field `gpx` is found in your record a map is drawn right below the
+content (and above a gallery, if there is one).
+
+The map is created using [leaflet](http://leafletjs.com/) and
+[leaflet-gpx](https://github.com/mpetazzoni/leaflet-gpx) and uses maptiles from
+the [Open Street Map Project](https://www.openstreetmap.org), some symbols from
+[Font Awesome](http://fontawesome.io/) are used in the footer to indicate distance,
+duration and elevations of your track.
 
 ### Optional publishing date and taxonomies
 

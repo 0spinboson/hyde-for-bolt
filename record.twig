@@ -18,6 +18,10 @@
         {{ record.content }}
       {% endif %}
 
+      {% if record.gpx %}
+        {% include('_gpx.twig') %}
+      {% endif %}
+
       {% if record.gallery %}
         {% include('_gallery.twig') %}
       {% endif %}
