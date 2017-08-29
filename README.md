@@ -97,12 +97,15 @@ duration and elevations of your track.
 ### Optional publishing date and taxonomies
 
 You can define for which ContentTypes the publishing date will be displayed by
-setting up the array in `show_publishdate` in `theme.yml`.
-Typically you don't want to show the date for pages.
-This applies for listings as well as the display of the documents.
+adding `show_publishdate: true` to your contenttypes values in `config://contenttypes.yml`.
+Typically you don't want to show the publishdate for pages.
 
-Display of taxonomies can be controlled via `shown_taxonomies`, just define which taxonomies should be displayed.
-For each taxonomy its possible to optionally show the groupname in front, define a prefix for each (such as # for tags) and define a separator (maybe a comma is a good choice).
+Display of taxonomies can be controlled via adding a corresponding value, e.g. `shown_taxonomies: [ categories, tags ]` to your contenttype definition.
+Hereby it is possible to use some taxonomies internally but not showing them to your visitors.
+Tags will be prefixed with a hash #, categories will be prefixed with an @.
+
+Both rules apply for listings as well as the display of the documents.
+
 
 ### Code highlighting
 

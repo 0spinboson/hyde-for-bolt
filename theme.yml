@@ -13,23 +13,6 @@
 # notfound: notfound.twig
 
 
-# publishing date and taxonomies can be shown right under the records title in
-# listings and their pages.
-# we can control for which contenttypes (their slugs) creation date is shown
-# and which taxonomies are shown (so we can use some taxonomies for internal
-# stuff, but dont show them to the visitors)
-# also see _recordinfos.twig
-show_publishdate: ['entries', 'posts', 'photos']
-shown_taxonomies:
-  'tags':
-    show_groupname: false
-    single_prefix: '#'
-    separator: ''
-  'categories':
-    show_groupname: false
-    single_prefix: '@'
-    separator: ''
-
 # shall a search box be shown as last item of the menu?
 show_search_in_menu: false
 
