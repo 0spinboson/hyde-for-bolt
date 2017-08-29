@@ -70,3 +70,9 @@ thumbnails:
             size: [450,450]
             cropping: crop
             allow_upscale: true
+        scale_720w:
+            size: [720,0]
+            allow_upscale: false
+        scale_500w:
+            size: [500,0]
+            allow_upscale: false

@@ -12,6 +12,11 @@
   {% endblock recordinfos %}
 
   {% block recordcontent %}
+      {% if record.show_image_above_body and record.image %}
+        <img src="{{ record.image|thumbnail('scale_720w') }}"
+             srcset="{{ record.image|thumbnail('scale_500w') }} 500w,
+                     {{ record.image|thumbnail('scale_720w') }} 720w">
+      {% endif %}
       {% if record.body %}
         {{ record.body }}
       {% elseif record.content %}

@@ -16,6 +16,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
 - [Features](#features)
+  - [Optional display of teaserimage in main article](#Optional-display-of-teaserimage-in-main-article)
   - [Galleries](#galleries)
   - [GPX tracks](#gpx-tracks)
   - [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
@@ -62,6 +63,12 @@ To use a theme, uncomment the related line in `theme.yml` to set the
 Hyde for Bolt's page orientation can be reversed by setting `reverse_layout: true` in `theme.yml`.
 
 ## Features
+
+### Optional display of teaserimage in main article
+
+By adding the field `show_image_above_body` with `type: checkbox` to your
+contenttype you can regulate if the teaser image will be shown on top of the article/entry.
+Normally the teaser image (field `image`) is only used for listings.
 
 ### Galleries
 
