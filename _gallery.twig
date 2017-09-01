@@ -13,9 +13,10 @@
             {% set caption = "" %}
         {% endif %}
         <a href="{{ asset(image.filename, 'files') }}" title="{{ caption }}">
-            <img src="{{ fn|thumbnail('thumb_350w') }}" alt="{{ caption }}" srcset="{{ fn|thumbnail('thumb_250w') }} 250w,
-            {{ fn|thumbnail('thumb_350w') }} 350w,
-            {{ fn|thumbnail('thumb_450w') }} 450w">
+            <img src="{{ fn|thumbnail('square_350w') }}" alt="{{ caption }}"
+            srcset="{{ fn|thumbnail('square_250w') }} 250w,
+            {{ fn|thumbnail('square_350w') }} 350w,
+            {{ fn|thumbnail('square_450w') }} 450w">
         </a>
     {% endfor %}
 </div>

@@ -41,15 +41,15 @@ highlight_theme:           'dracula'
 # resolutions or to decouple image sizes from template files.
 thumbnails:
     aliases:
-        thumb_250w:
+        square_250w:
           size:            [250,250]
           cropping:        crop
           allow_upscale:   true
-        thumb_350w:
+        square_350w:
             size:          [350,350]
             cropping:      crop
             allow_upscale: true
-        thumb_450w:
+        square_450w:
             size:          [450,450]
             cropping:      crop
             allow_upscale: true
