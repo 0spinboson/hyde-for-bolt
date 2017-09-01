@@ -30,8 +30,13 @@
   <meta name="description" content="{{ description }}">
 
   <!-- Icons -->
-  <link rel="icon" type="image/png" href="{{ asset('images/favicon.png', 'theme') }}" sizes="32x32">
-  <link rel="apple-touch-icon" href="{{ asset( 'images/apple-touch-icon.png', 'theme') }}">
+  {% if file_exists('files/favicon.png') %}
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png', 'files') }}" sizes="32x32">
+    <link rel="apple-touch-icon" type="image/png" href="{{ asset('favicon.png', 'files') }}">
+  {% else %}
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png', 'theme') }}" sizes="32x32">
+    <link rel="apple-touch-icon" type="image/png" href="{{ asset('images/favicon.png', 'files') }}">
+  {% endif %}
 
   <!-- CEO -->
   {% set keywords = record.title %}

@@ -16,6 +16,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
 - [Features](#features)
+  - [Favicon](#favicon)
   - [Optional display of teaserimage in main article](#Optional-display-of-teaserimage-in-main-article)
   - [Galleries](#galleries)
   - [GPX tracks](#gpx-tracks)
@@ -63,6 +64,10 @@ To use a theme, uncomment the related line in `theme.yml` to set the
 Hyde for Bolt's page orientation can be reversed by setting `reverse_layout: true` in `theme.yml`.
 
 ## Features
+
+### Favicon
+
+Just add a `favicon.png` with at least size of 180px*180px at the top level of your files-folder and it will be used as _favicon_ as well as _apple-touch-icon_, otherwise the themes default favicon ![](images/favicon.png) will be used.
 
 ### Optional display of teaserimage in main article
 
