@@ -1,27 +1,27 @@
 {% set link = pager.makelink() %}
 
 {% if pager.totalpages > 1 %}
-  <div class="pagination">
-      {# 'prev' #}
-      {% if pager.current > 1 and class!="narrow" %}
-          <a href="{{link}}{{pager.current-1}}" rel="noindex, follow" class="pagination-item">
-            &#8592;
-          </a>
-      {% else %}
-          <span class="pagination-item">
-            &#8592;
-          </span>
-      {% endif %}
+    <div class="pagination">
+        {# 'prev' #}
+        {% if pager.current > 1 and class != "narrow" %}
+            <a href="{{link}}{{pager.current-1}}" rel="noindex, follow" class="pagination-item">
+                &#8592;
+            </a>
+        {% else %}
+            <span class="pagination-item">
+                &#8592;
+            </span>
+        {% endif %}
 
-      {# 'next' #}
-      {% if pager.current < pager.totalpages and class!="narrow" %}
-          <a href="{{link}}{{pager.current+1}}" rel="noindex, follow" class="pagination-item">
-            &#8594;
-          </a>
-      {% else %}
-          <span class="pagination-item">
-            &#8594;
-          </span>
-      {% endif %}
-  </div>
+        {# 'next' #}
+        {% if pager.current < pager.totalpages and class != "narrow" %}
+            <a href="{{link}}{{pager.current+1}}" rel="noindex, follow" class="pagination-item">
+                &#8594;
+            </a>
+        {% else %}
+            <span class="pagination-item">
+                &#8594;
+            </span>
+        {% endif %}
+    </div>
 {% endif %}

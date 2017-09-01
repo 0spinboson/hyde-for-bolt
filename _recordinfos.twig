@@ -3,25 +3,30 @@
 {# show publishing date for certain contenttypes
    can be defined in theme.yml #}
 {% if record.contenttype.show_publish_date %}
-  {{ record.datepublish|localedatetime("%d.%m.%Y") }}
+    {{ record.datepublish|localedatetime("%d.%m.%Y") }}
 {% endif %}
 
 {% if record.taxonomy is defined %}
-  {% for type, values in record.taxonomy %}
-    {% if type in record.contenttype.shown_taxonomy %}
-      {% set prefix = type == "tags" ? '#' : type == "categories" ? '@' : '' %}
-      {% for link, value in values %}
-        <a href="{{ link }}">
-          {{ prefix }}{{ value }}
-        </a>
-      {% endfor %}
+    {% for type, values in record.taxonomy %}
+        {% if type in record.contenttype.shown_taxonomy %}
+            {% set prefix = type == "tags"
+                ? '#'
+                : type == "categories"
+                    ? '@'
+                    : '' %}
+            {% for link, value in values %}
+                <a href="{{ link }}">
+                    {{ prefix }}{{ value }}
+                </a>
+            {% endfor %}
 
-    {% endif %}
+        {% endif %}
 
-  {% endfor %}
+    {% endfor %}
 {% endif %}
 
-
-{% if extended|default() %}
-         - <a href="{{ record.link() }}">{{ __('general.phrase.permalink') }}</a> -
+{% if extended | default() %}
+    -
+    <a href="{{ record.link() }}">{{ __('general.phrase.permalink') }}</a>
+    -
 {% endif %}

@@ -3,10 +3,10 @@
 {% setcontent m = 'block/maintenance' %}
 {% block content %}
     {% if m and m.title and m.content %}
-      <h1>{{ m.title }}</h1>
-      {{ m.content }}
+        <h1>{{ m.title }}</h1>
+        {{ m.content }}
     {% else %}
-      <h1>{{ __('general.phrase.maintenance') }}</h1>
-      {{ __('See You Later, Alligator.') }}
+        <h1>{{ __('general.phrase.maintenance') }}</h1>
+        {{ __('See You Later, Alligator.') }}
     {% endif %}
 {% endblock content %}

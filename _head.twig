@@ -1,91 +1,93 @@
 <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <!-- title and description -->
-  {% set title = ''%}
-      {%- if record.title is defined %}
-    {% set title = title ~ record.title|striptags ~ ' | '%}
-  {% endif -%}
-  {% set title = title ~ app.config.get('general/sitename') %}
-      {% if record.title is not defined and app.config.get('general/payoff') %}
-    {% set title = title ~ ' | ' ~ app.config.get('general/payoff') %}
-  {% endif -%}
+    <!-- title and description -->
+    {% set title = ''%}
+    {%- if record.title is defined %}
+        {% set title = title ~ record.title|striptags ~ ' | '%}
+    {% endif -%}
+    {% set title = title ~ app.config.get('general/sitename') %}
+    {% if record.title is not defined and app.config.get('general/payoff') %}
+        {% set title = title ~ ' | ' ~ app.config.get('general/payoff') %}
+    {% endif -%}
 
-  {% if record.teaser %}
-    {% set description = record.teaser|striptags %}
-  {% elseif app.config.get('general/payoff') %}
-    {% set description = app.config.get('general/payoff') %}
-  {% else %}
-    {% set description = "" %}
-  {% endif %}
+    {% if record.teaser %}
+        {% set description = record.teaser | striptags %}
+    {% elseif app.config.get('general/payoff') %}
+        {% set description = app.config.get('general/payoff') %}
+    {% else %}
+        {% set description = "" %}
+    {% endif %}
 
-  <title>
-    {{ title }}
-  </title>
-  <meta name="description" content="{{ description }}">
+    <title>
+        {{ title }}
+    </title>
+    <meta name="description" content="{{ description }}">
 
-  <!-- Icons -->
-  {% if file_exists('files/favicon.png') %}
-    <link rel="icon" type="image/png" href="{{ asset('favicon.png', 'files') }}" sizes="32x32">
-    <link rel="apple-touch-icon" type="image/png" href="{{ asset('favicon.png', 'files') }}">
-  {% else %}
-    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png', 'theme') }}" sizes="32x32">
-    <link rel="apple-touch-icon" type="image/png" href="{{ asset('images/favicon.png', 'files') }}">
-  {% endif %}
+    <!-- Icons -->
+    {% if file_exists('files/favicon.png') %}
+        <link rel="icon" type="image/png" href="{{ asset('favicon.png', 'files') }}" sizes="32x32">
+        <link rel="apple-touch-icon" type="image/png" href="{{ asset('favicon.png', 'files') }}">
+    {% else %}
+        <link rel="icon" type="image/png" href="{{ asset('images/favicon.png', 'theme') }}" sizes="32x32">
+        <link rel="apple-touch-icon" type="image/png" href="{{ asset('images/favicon.png', 'files') }}">
+    {% endif %}
 
-  <!-- CEO -->
-  {% set keywords = record.title %}
-  {% for c in record.taxonomy.categories %}
-    {% set keywords = keywords  ~ ', ' ~ c %}
-  {% endfor %}
-  {% for c in record.taxonomy.tags %}
-    {% set keywords = keywords  ~ ', ' ~ c %}
-  {% endfor %}
-  <meta name="keywords" content="{{ keywords }}">
+    <!-- CEO -->
+    {% set keywords = record.title %}
+    {% for c in record.taxonomy.categories %}
+        {% set keywords = keywords ~ ', ' ~ c %}
+    {% endfor %}
+    {% for c in record.taxonomy.tags %}
+        {% set keywords = keywords ~ ', ' ~ c %}
+    {% endfor %}
+    <meta name="keywords" content="{{ keywords }}">
 
-  <meta property="og:site_name" content="{{ app.config.get('general/sitename') }}">
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ description }}">
-  {% if image(record.image) %}
-    <meta property="og:image" content="{{ paths.hosturl ~ record.image|image(400,0,'r') }}">
-  {% endif %}
-  <meta property="og:url" content="{{ paths.currenturl }}">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="{{ app.config.get('general/sitename') }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    {% if image(record.image) %}
+        <meta property="og:image" content="{{ paths.hosturl ~ record.image|image(400,0,'r') }}">
+    {% endif %}
+    <meta property="og:url" content="{{ paths.currenturl }}">
+    <meta name="twitter:card" content="summary_large_image">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="{{ asset('css/poole.css', 'theme') }}">
-  <link rel="stylesheet" href="{{ asset('css/hyde.css', 'theme') }}">
-  <link rel="stylesheet" href="{{ asset('css/extra.css', 'theme') }}">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/poole.css', 'theme') }}">
+    <link rel="stylesheet" href="{{ asset('css/hyde.css', 'theme') }}">
+    <link rel="stylesheet" href="{{ asset('css/extra.css', 'theme') }}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
-  <!-- highlight.js -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ theme.highlight_theme }}.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ theme.highlight_theme }}.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
 
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-  <!-- imagelightbox -->
-  {% if record.gallery %}
-    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script language="javascript" type="text/javascript" src="{{ asset('js/imagelightbox/imagelightbox.min.js', 'theme') }}"></script>
-    <script language="javascript" type="text/javascript" src="{{ asset('js/imagelightbox/imagelightbox.extras.js', 'theme') }}"></script>
-    <link rel="stylesheet" href="{{ asset('js/imagelightbox/imagelightbox.css', 'theme') }}" />
-  {% endif %}
+    <!-- imagelightbox -->
+    {% if record.gallery %}
+        <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script language="javascript" type="text/javascript" src="{{ asset('js/imagelightbox/imagelightbox.min.js', 'theme') }}"></script>
+        <script language="javascript" type="text/javascript" src="{{ asset('js/imagelightbox/imagelightbox.extras.js', 'theme') }}"></script>
+        <link rel="stylesheet" href="{{ asset('js/imagelightbox/imagelightbox.css', 'theme') }}"/>
+    {% endif %}
 
-  <!-- gpx tracks, leaflet -->
-  {% if record.gpx %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.3.1/gpx.min.js"></script>
-  {% endif %}
+    <!-- gpx tracks, leaflet -->
+    {% if record.gpx %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.3.1/gpx.min.js"></script>
+    {% endif %}
 
-  <!-- RSS -->
-  <!--link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"-->
+    <!-- RSS -->
+    <!--link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"-->
 </head>
