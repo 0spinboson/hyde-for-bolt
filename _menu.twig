@@ -7,7 +7,7 @@
 
     {% if theme.show_search_in_menu %}
         <form method="get" action="{{ path('search') }}" id="searchform-sidebar" enctype="text/plain">
-            <input type="search" value="{{ search|default() }}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search">
+            <input type="search" value="{{ search|default() }}" placeholder="{{ __('general.phrase.search') }}" name="search">
             <button type="submit" class="button">
                 {{ __('general.phrase.search') }}
             </button>

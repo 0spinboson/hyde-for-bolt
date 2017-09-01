@@ -197,11 +197,17 @@ input:focus {
     border: 0px solid;
     border-bottom: 1px solid rgba(255,255,255,.5);;
     border-radius: 0px;
+    -webkit-border-radius:0px; /* safari needs this */
+    -webkit-appearance: none; /* safari needs this */
     text-align: inherit;
     font-size: inherit;
     font-family: inherit;
     letter-spacing: inherit;
     padding: 0px;
+    /* Safari still adds a "padding-left" on the text/placeholder, this can only be
+    removed by remove type="search" from the input, but then we would lose ability
+    to clear the searchterm with the little x or ESC
+    so: Safari-users need to live with the padding */
     max-width: 150px;
 }
 #searchform-sidebar input:focus{
