@@ -88,6 +88,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.3.1/gpx.min.js"></script>
     {% endif %}
 
+    <!-- custom CSS -->
+    {% if file_exists('files/custom.css') %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('custom.css', 'files') }}">
+    {% endif %}
+
     <!-- RSS -->
     <!--link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"-->
 </head>
