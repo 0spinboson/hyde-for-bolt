@@ -78,6 +78,37 @@ img {
     color: inherit;
 }
 
+/* readmore of listings */
+p.post-teaser{
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+p.post-teaser a.readmore{
+    width: 100%;
+    overflow: hidden;
+}
+
+p.post-teaser a.readmore img{
+    max-width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+p.post-teaser a.readmore img:hover{
+    -webkit-transform:scale(1.1); /* Safari and Chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    -ms-transform:scale(1.1); /* IE 9 */
+    -o-transform:scale(1.1); /* Opera */
+     transform:scale(1.1);
+}
+
+
 
 /* gallery thumbnails */
 
@@ -92,26 +123,9 @@ img {
     align-items: center;
 }
 
-.thumbs a,
-.indexthumbs a {
+.thumbs a{
+    overflow: hidden;
     width: 100%;
-}
-
-.indexthumbs a {
-    position: relative;
-}
-
-.indexthumbs h3 {
-    margin: 0 !important;
-    padding: 8px !important;
-}
-
-.indexthumbs .articleinfos {
-    position: absolute;
-    bottom: 0;
-    left: 0px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
 @media (min-width: 30em) {
@@ -126,17 +140,11 @@ img {
     }
 }
 
-.thumbs a img,
-.indexthumbs a img {
+.thumbs a img{
     margin: 0 !important;
     margin-top: 5px !important;
     width: 100%;
     max-width: 100%;
-    -webkit-filter: saturate(100%);
-    -moz-filter: saturate(100%);
-    -o-filter: saturate(100%);
-    -ms-filter: saturate(100%);
-    filter: saturate(100%);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -146,11 +154,11 @@ img {
 
 .thumbs a img:hover,
 .indexthumbs a img:hover {
-    -webkit-filter: saturate(150%);
-    -moz-filter: saturate(150%);
-    -o-filter: saturate(150%);
-    -ms-filter: saturate(150%);
-    filter: saturate(150%);
+    -webkit-transform:scale(1.1); /* Safari and Chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    -ms-transform:scale(1.1); /* IE 9 */
+    -o-transform:scale(1.1); /* Opera */
+     transform:scale(1.1);
 }
 
 
