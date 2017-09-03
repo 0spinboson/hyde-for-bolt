@@ -19,7 +19,10 @@
             {% set title = title ~ __('general.phrase.search-for-ellipsis') ~ ' ' ~ search|default() %}
         {% endif %}
     {% endif %}
-    {% set title = title ~ ' | ' ~ app.config.get('general/sitename') %}
+    {% if title %}
+        {% set title = title ~ ' | ' %}
+    {% endif %}
+    {% set title = title ~ app.config.get('general/sitename') %}
 
     {% if record.teaser is defined %}
         {% set description = record.teaser | striptags %}
