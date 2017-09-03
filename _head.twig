@@ -8,18 +8,27 @@
 
     <!-- title and description -->
     {% set title = ''%}
-    {%- if record.title is defined %}
-        {% set title = title ~ record.title|striptags ~ ' | '%}
-    {% endif -%}
-    {% set title = title ~ app.config.get('general/sitename') %}
-    {% if record.title is not defined and app.config.get('general/payoff') %}
-        {% set title = title ~ ' | ' ~ app.config.get('general/payoff') %}
-    {% endif -%}
+    {% if record.title is defined %}
+        {% set title = title ~ record.title|striptags %}
+    {% else %}
+        {% if taxonomytype is defined %}
+            {% set title = title ~  __('general.phrase.overview-for') ~ ' ' ~ slug %}
+        {% elseif contenttype is defined %}
+            {% set title = title ~ title ~ __('general.phrase.overview-for') ~ ' ' ~ contenttype %}
+        {% elseif search is defined %}
+            {% set title = title ~ __('general.phrase.search-for-ellipsis') ~ ' ' ~ search|default() %}
+        {% endif %}
+    {% endif %}
+    {% set title = title ~ ' | ' ~ app.config.get('general/sitename') %}
 
-    {% if record.teaser %}
+    {% if record.teaser is defined %}
         {% set description = record.teaser | striptags %}
+    {% elseif record.content is defined %}
+        {% set description = record.content|excerpt(200) %}
+    {% elseif record.body is defined %}
+        {% set description = record.body|excerpt(200) %}
     {% elseif app.config.get('general/payoff') %}
-        {% set description = app.config.get('general/payoff') %}
+        {% set description = app.config.get('general/payoff')|striptags %}
     {% else %}
         {% set description = "" %}
     {% endif %}
