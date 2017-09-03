@@ -255,3 +255,8 @@ input:focus {
 #searchform-sidebar button {
     display: none;
 }
+
+/* pagination items */
+a.pagination-item:hover{
+    text-decoration: none;
+}
