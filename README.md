@@ -37,7 +37,24 @@ Hyde for Bolt includes some customizable options, typically applied via `theme.y
 
 The `main` menu is used for the sidebar, you can adjust it in the `config://menu.yml` file.
 
-You can show a very basic search-box as the last item of the menu, to enable it set `show_search_in_menu: true` in `theme.yml`.
+You can show a very basic search-box as any item in the menu, to enable it add
+an entry with `class: menusearch` to your menu, the `label` will be used as placeholder
+for the searchbox.
+A `menu.yml` can look like this:
+```yml
+main:
+    - label: Home
+      title: Welcome page
+      path: homepage
+      class: first
+    - label: Posts
+      path: posts
+    - label: Entries
+      path: entries
+    - label: Search...
+      class: menusearch
+```
+
 
 You can show a copyright notice for your site at the bottom of the sidebar, to enable it set `show_copyright_in_sidebar: true` in `theme.yml`.
 

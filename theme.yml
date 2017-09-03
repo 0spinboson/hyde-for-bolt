@@ -12,10 +12,6 @@
 # search_results_template: search.twig
 # notfound:                notfound.twig
 
-
-# shall a search box be shown as last item of the menu?
-show_search_in_menu:       false
-
 # shall the copyright notice be shown on sidebar?
 show_copyright_in_sidebar: false
 

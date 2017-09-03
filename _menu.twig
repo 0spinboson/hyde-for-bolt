@@ -1,16 +1,16 @@
 <nav class="sidebar-nav">
     {% for item in menu %}
-        <a class="sidebar-nav-item{% if item|current %} active{% endif %}" href="{{ item.link }}">
-            {{ item.label }}
-        </a>
+        {% if item.class == 'menusearch' %}
+            <form method="get" action="{{ path('search') }}" id="searchform-sidebar" enctype="text/plain">
+                <input type="search" value="{{ search|default() }}" placeholder="{{ item.label }}" name="search">
+                <button type="submit" class="button">
+                    {{ __('general.phrase.search') }}
+                </button>
+            </form>
+        {% else %}
+            <a class="sidebar-nav-item{% if item|current %} active{% endif %}" href="{{ item.link }}">
+                {{ item.label }}
+            </a>
+        {% endif %}
     {% endfor %}
-
-    {% if theme.show_search_in_menu %}
-        <form method="get" action="{{ path('search') }}" id="searchform-sidebar" enctype="text/plain">
-            <input type="search" value="{{ search|default() }}" placeholder="{{ __('general.phrase.search') }}" name="search">
-            <button type="submit" class="button">
-                {{ __('general.phrase.search') }}
-            </button>
-        </form>
-    {% endif %}
 </nav>
