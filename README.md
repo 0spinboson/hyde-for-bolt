@@ -120,6 +120,13 @@ Display of taxonomies can be controlled via adding a corresponding value, e.g. `
 
 Both rules apply for listings as well as the display of the documents.
 
+### Latest posts
+
+You can use the template `latest.twig` (see [Bolt Docs](https://docs.bolt.cm/3.3/fields/templateselect)) to include lists of the last three entries of each of your ContentTypes.
+Please note that you have to explicitly add `show_in_latest: true` to your
+ContentType to make it appear in the list of the latest entries. Also `viewless`
+must not be set to `true`.
+
 ### Code highlighting
 
 Code blocks are highlighted using [highlight.js](https://highlightjs.org/), the theme used for highlighting can be defined in `theme.yml` by setting the `highlight_theme` variable (use only lowercase!), see the [highlight.js demo page](https://highlightjs.org/static/demo/) for previews of the different themes.

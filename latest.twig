@@ -1,7 +1,7 @@
 {% extends 'record.twig' %}
 
-{% block recordcontent %}
-    {% for ct in config.get('contenttypes')if not ct.viewless | default(false) %}
+{% block othercontent %}
+    {% for ct in config.get('contenttypes') if ((not ct.viewless) and (ct.show_in_latest)) | default(false) %}
         {% setcontent records = ct.slug ~ "/latest/3" %}
 
         <div class="latest">
@@ -32,4 +32,4 @@
             </ul>
         </div>
     {% endfor %}
-{% endblock recordcontent %}
+{% endblock othercontent %}
