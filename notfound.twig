@@ -1,0 +1,11 @@
+{% extends 'record.twig' %}
+
+{% setcontent m = 'block/notfound' %}
+{% block content %}
+    {% if m and m.title and m.content %}
+        <h1>{{ m.title }}</h1>
+        {{ m.content }}
+    {% else %}
+        <h1>{{ __('general.phrase.no-content-found') }}</h1>
+    {% endif %}
+{% endblock content %}
