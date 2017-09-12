@@ -24,7 +24,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [GPX tracks](#gpx-tracks)
   - [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
   - [Latest posts](#latest-posts)
-  - [Not found template](#not-found-template)
+  - [No listing template](#no-listing-template)
   - [Code highlighting](#code-highlighting)
   - [Maintenance Text](#maintenance-text)
   - [Copyright notice](#copyright-notice)
@@ -129,10 +129,10 @@ Please note that you have to explicitly add `show_in_latest: true` to your
 ContentType to make it appear in the list of the latest entries. Also `viewless`
 must not be set to `true`.
 
-### Not found template
+### No listing template
 
-A bare `notfound.twig`-template is also included, it uses title and content of
-a `block/notfound` if present, otherwise it uses a translated string.
+A bare `nolisting.twig`-template is also included, it uses title and content of
+a `block/nolisting` if present, otherwise it uses a translated string.
 This template can be used as `listing_template` for ContentTypes that should not
 be listable (e.g. pages).
 Unfortunately there seems to be no build-in parameter to _forbid_ listings for a certain ContentType.
