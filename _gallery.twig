@@ -21,31 +21,6 @@
         </a>
     {% endfor %}
 </div>
-<script>
-    $('.thumbsxxx a').imageLightbox({
-        allowedTypes: 'png|jpg|jpeg|gif', // string;
-        animationSpeed: 250, // integer;
-        preloadNext: true, // bool;            silently preload the next image
-        enableKeyboard: true, // bool;            enable keyboard shortcuts (arrows Left/Right and Esc)
-        quitOnEnd: false, // bool;            quit after viewing the last image
-        quitOnImgClick: false, // bool;            quit when the viewed image is clicked
-        quitOnDocClick: true, // bool;            quit when anything but the viewed image is clicked
-        onStart: function() {
-            overlayOn();
-        }, // function/bool;   calls function when the lightbox starts
-        onEnd: function() {
-            overlayOff();
-            captionOff();
-        }, // function/bool;   calls function when the lightbox quits
-        onLoadStart: function() {
-            captionOff();
-        }, // function/bool;   calls function when the image load begins
-        onLoadEnd: function() {
-            captionOn();
-        } // function/bool;   calls function when the image finishes loading
-    });
-</script>
-
 <!-- PhotoSwipe , see http://photoswipe.com/documentation/getting-started.html -->
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -149,7 +124,8 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 // <img> thumbnail element, retrieving thumbnail url
 
                 //since the dimensions of the thumbnail and our big image doesnt match,
-                //we dont define msrc (see http://photoswipe.com/documentation/faq.html#different-thumbnail-dimensions)
+                //we dont define msrc
+                //(see http://photoswipe.com/documentation/faq.html#different-thumbnail-dimensions)
                 //item.msrc = linkEl.children[0].getAttribute('src');
             }
 
