@@ -104,9 +104,9 @@ By adding the field `show_image_above_body` with `type: checkbox` to your conten
 
 ### Galleries
 
-Hyde for Bolt supports galleries - to use them just add a field `gallery` with `type: imagelist` to your contenttype. [ImageLightbox](https://osvaldas.info/image-lightbox-responsive-touch-friendly) is used as lightbox for the gallery images.
+Hyde for Bolt supports galleries - to use them just add a field `gallery` with `type: imagelist` to your contenttype. [PhotoSwipe](http://photoswipe.com/) is used as lightbox for the gallery images.
 
-Captions for galleries can be shown optionally, to manage this behavior add a field `show_gallery_captions` with `type: checkbox` to your contenttype.
+Captions can be shown optionally, to manage this behavior add a field `show_gallery_captions` with `type: checkbox` to your contenttype.
 
 ### GPX tracks
 
