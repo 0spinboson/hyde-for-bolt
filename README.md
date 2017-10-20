@@ -100,25 +100,25 @@ a{
 
 ### Optional display of teaserimage in main article
 
-By adding the field `show_image_above_body` with `type: checkbox` to your contenttype you can regulate if the teaser image will be shown on top of the article/entry. Normally the teaser image (field `image`) is only used for listings.
+By adding the field `show_image_above_body` with `type: checkbox` to your ContentType you can regulate if the teaser image will be shown on top of the article/entry. Normally the teaser image (field `image`) is only used for listings.
 
 ### Galleries
 
-Hyde for Bolt supports galleries - to use them just add a field `gallery` with `type: imagelist` to your contenttype. [PhotoSwipe](http://photoswipe.com/) is used as lightbox for the gallery images.
+Hyde for Bolt supports galleries - to use them just add a field `gallery` with `type: imagelist` to your ContentType. [PhotoSwipe](http://photoswipe.com/) is used as lightbox for the gallery images.
 
-Captions can be shown optionally, to manage this behavior add a field `show_gallery_captions` with `type: checkbox` to your contenttype.
+Captions can be shown optionally, to manage this behavior add a field `show_gallery_captions` with `type: checkbox` to your ContentType.
 
 ### GPX tracks
 
-If you regularly publish gpx tracks with your posts, you can add a field `gpx` with `type: file` to your contenttype. You also have to extend `accept_file_types` in `config.yml` to accept `gpx`-files in order to be able to upload your tracks. If a nonempty field `gpx` is found in your record a map is drawn right below the content (and above a gallery, if there is one).
+If you regularly publish gpx tracks with your posts, you can add a field `gpx` with `type: file` to your ContentType. You also have to extend `accept_file_types` in `config.yml` to accept `gpx`-files in order to be able to upload your tracks. If a nonempty field `gpx` is found in your record a map is drawn right below the content (and above a gallery, if there is one).
 
 The map is created using [leaflet](http://leafletjs.com/) and [leaflet-gpx](https://github.com/mpetazzoni/leaflet-gpx) and uses maptiles from the [Open Street Map Project](https://www.openstreetmap.org), some symbols from [Font Awesome](http://fontawesome.io/) are used in the footer to indicate distance, duration and elevations of your track.
 
 ### Optional publishing date and taxonomies
 
-You can define for which ContentTypes the publishing date will be displayed by adding `show_publishdate: true` to your contenttypes values in `config://contenttypes.yml`. Typically you don't want to show the publishdate for pages.
+You can define for which ContentTypes the publishing date will be displayed by adding `show_publishdate: true` to your ContentTypes values in `config://contenttypes.yml`. Typically you don't want to show the publishdate for pages.
 
-Display of taxonomies can be controlled via adding a corresponding value, e.g. `shown_taxonomies: [ categories, tags ]` to your contenttype definition. Hereby it is possible to use some taxonomies internally but not showing them to your visitors. Tags will be prefixed with a hash #, categories will be prefixed with an @.
+Display of taxonomies can be controlled via adding a corresponding value, e.g. `shown_taxonomies: [ categories, tags ]` to your ContentType definition. Hereby it is possible to use some taxonomies internally but not showing them to your visitors. Tags will be prefixed with a hash #, categories will be prefixed with an @.
 
 Both rules apply for listings as well as the display of the documents.
 
@@ -147,7 +147,7 @@ To set an individual title and content of your Maintenance-Site, just create `bl
 
 ### Copyright notice
 
-If you regularly use content which needs a copyright notice, just add a field `copyright` with `type: html` or `type:markdown` to your contenttype. The notice will be added below your content, and below the gallery (if there is one).
+If you regularly use content which needs a copyright notice, just add a field `copyright` with `type: html` or `type:markdown` to your ContentType. The notice will be added below your content, and below the gallery (if there is one).
 
 ## License
 
