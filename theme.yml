@@ -51,6 +51,6 @@ thumbnails:
         scale_500w:
             size:          [500,0]
             allow_upscale: false
-        scale_350h:
-            size:          [0,350]
+        scale_250h:
+            size:          [0,250]
             allow_upscale: false
