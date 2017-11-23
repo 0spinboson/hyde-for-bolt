@@ -1,7 +1,7 @@
 {% extends 'record.twig' %}
 
 {% block othercontent %}
-    {% for ct in config.get('contenttypes') if ((not ct.viewless) and (ct.show_in_latest)) | default(false) %}
+    {% for ct in config.get('contenttypes') if ((not ct.viewless) and (not ct.hide_in_listings)) | default(false) %}
         {% setcontent records = ct.slug ~ "/latest/3" %}
 
         <div class="latest">

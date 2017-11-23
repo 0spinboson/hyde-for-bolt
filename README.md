@@ -24,7 +24,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [GPX tracks](#gpx-tracks)
   - [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
   - [Latest posts](#latest-posts)
-  - [No listing template](#no-listing-template)
+  - [Prevent listing](#prevent-listing)
   - [Code highlighting](#code-highlighting)
   - [Maintenance Text](#maintenance-text)
   - [Copyright notice](#copyright-notice)
@@ -124,18 +124,20 @@ Both rules apply for listings as well as the display of the documents.
 
 ### Latest posts
 
-You can use the template `latest.twig` (see [Bolt Docs](https://docs.bolt.cm/3.3/fields/templateselect)) to include lists of the last three entries of each of your ContentTypes.
-Please note that you have to explicitly add `show_in_latest: true` to your
-ContentType to make it appear in the list of the latest entries. Also `viewless`
-must not be set to `true`.
+You can use the template `latest.twig`
+(see [Bolt Docs](https://docs.bolt.cm/3.3/fields/templateselect)) to include
+lists of the last three entries of each of your ContentTypes.
+Please note that ContentTypes with `hide_in_listings: true` will not appear in
+the list of the latest entries (see below). Also `viewless` must not be set to `true`.
 
-### No listing template
+### Prevent listing
 
-A bare `nolisting.twig`-template is also included, it uses title and content of
-a `block/nolisting` if present, otherwise it uses a translated string.
-This template can be used as `listing_template` for ContentTypes that should not
-be listable (e.g. pages).
-Unfortunately there seems to be no build-in parameter to _forbid_ listings for a certain ContentType.
+You can prevent records of a certain ContentTypes from showing in listings and
+in in the _latest template_ (see above) by adding `hide_in_listings: true` to
+this ContentType.  
+This can be useful for ContentTypes that should not be listable (e.g. pages).
+Unfortunately there seems to be no build-in parameter to _forbid_ listings for a
+certain ContentType.
 
 ### Code highlighting
 

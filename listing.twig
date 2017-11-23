@@ -35,6 +35,8 @@
     {# BEGIN normal listing stuff #}
 
     {% for record in records %}
+        {% if not record.contenttype.hide_in_listings %}
+        {# dont show anything if the contenttype has defined hide_in_listings = true #}
         <div class="post">
             <h1 class="post-title">
                 <a href="{{ record.link }}">
@@ -66,6 +68,7 @@
                 </a>
             </p>
         </div>
+        {% endif %}
 
     {% else %}
         <div class="post">
