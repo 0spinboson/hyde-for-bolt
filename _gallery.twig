@@ -14,10 +14,7 @@
         {% endif %}
         <a href="{{ asset(image.filename, 'files') }}" title="{{ caption }}"
         data-size="{{ imageinfo(fn).info.width }}x{{ imageinfo(fn).info.height }}">
-            <img src="{{ fn|thumbnail('square_350w') }}" alt="{{ caption }}"
-            srcset="{{ fn|thumbnail('square_250w') }} 250w,
-            {{ fn|thumbnail('square_350w') }} 350w,
-            {{ fn|thumbnail('square_450w') }} 450w">
+            <img src="{{ fn|thumbnail('scale_250h') }}" alt="{{ caption }}">
         </a>
     {% endfor %}
 </div>
