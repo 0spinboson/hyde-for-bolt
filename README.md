@@ -24,6 +24,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [GPX tracks](#gpx-tracks)
   - [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
   - [Latest posts](#latest-posts)
+  - [Archive template](#archive-template)
   - [Prevent listing](#prevent-listing)
   - [Code highlighting](#code-highlighting)
   - [Maintenance Text](#maintenance-text)
@@ -128,13 +129,23 @@ You can use the template `latest.twig`
 (see [Bolt Docs](https://docs.bolt.cm/3.3/fields/templateselect)) to include
 lists of the last three entries of each of your ContentTypes.
 Please note that ContentTypes with `hide_in_listings: true` will not appear in
-the list of the latest entries (see below). Also `viewless` must not be set to `true`.
+the list of the latest entries (see [below](#prevent-listing)).
+Also `viewless` must not be set to `true`.  
+The lists will be shown below the _normal_ content (title, body/content) of the
+record whose template is set to `latest.twig`.
+
+### Archive template
+
+Similar to the _latest template_ (see above) there also exists an `archive.twig`
+template which can be used to list __all__ records of all ContentTypes.
+Again note that ContentTypes with `hide_in_listings: true` will not appear in
+the list and `viewless` must not be set to `true`.
 
 ### Prevent listing
 
 You can prevent records of a certain ContentTypes from showing in listings and
-in in the _latest template_ (see above) by adding `hide_in_listings: true` to
-this ContentType.  
+in in the _latest template_ and _archive template_ (see above) by adding
+`hide_in_listings: true` to this ContentType.  
 This can be useful for ContentTypes that should not be listable (e.g. pages).
 Unfortunately there seems to be no build-in parameter to _forbid_ listings for a
 certain ContentType.
