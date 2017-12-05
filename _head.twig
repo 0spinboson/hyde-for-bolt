@@ -105,6 +105,25 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('custom.css', 'files') }}">
     {% endif %}
 
+    <!-- on mobile, we want to scroll over the header/sidebar when we come from the same domain -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var isFromSameDomain =
+            document.referrer &&
+            document.referrer.match(/:\/\/(.[^/]+)/)[1] == document.domain;
+
+        var sb = document.getElementById('sidebar');
+        var isMobile =
+            sb &&
+            sb.clientHeight &&
+            sb.clientHeight != window.innerHeight;
+
+        if (isFromSameDomain && isMobile){
+            window.scrollBy(0,sb.clientHeight - 15);
+        }
+    });
+    </script>
+
     <!-- RSS -->
     <!--link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"-->
 </head>
