@@ -19,10 +19,12 @@
                     {{ prefix }}{{ value }}
                 </a>
             {% endfor %}
-
         {% endif %}
-
     {% endfor %}
+{% endif %}
+
+{% if record.use_password_protection %}
+    <span>🔒</span>
 {% endif %}
 
 {% if extended | default() %}

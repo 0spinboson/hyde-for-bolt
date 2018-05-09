@@ -23,7 +23,8 @@ a.readmore,
     color: inherit !important;
 }
 
-.post-date a {
+.post-date a,
+.post-date span {
     margin-left: 0.5rem;
 }
 

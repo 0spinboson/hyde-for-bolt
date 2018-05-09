@@ -1,6 +1,10 @@
 {% extends '_master.twig' %}
 
 {% block content %}
+    {# the first thing is to check if this record shall be password protected #}
+    {% if record.use_password_protection %}
+        {{ passwordprotect() }}
+    {% endif %}
     <div class="post">
         <h1 class="post-title">
             {{ record.title }}
