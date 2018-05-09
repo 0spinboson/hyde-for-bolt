@@ -17,6 +17,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
 
 - [Features](#features)
 
+  - [Password Protection](#password-protection)
   - [Favicon](#favicon)
   - [Custom CSS](#custom-css)
   - [Optional display of teaserimage in main article](#optional-display-of-teaserimage-in-main-article)
@@ -78,6 +79,25 @@ To use a theme, uncomment the related line in `theme.yml` to set the `color_them
 Hyde for Bolt's page orientation can be reversed by setting `reverse_layout: true` in `theme.yml`.
 
 ## Features
+
+### Password Protection
+
+The theme supports the [PasswordProtect extension by Bob den Otter](https://github.com/bobdenotter/PasswordProtect).  
+To use it, just add the following new `field` to the `fields` of the ContentType you want to protect:
+```
+use_password_protection:
+            type: checkbox
+            default: false
+            label: 'Use the password protection provided by the PasswordProtect extension'
+            variant: inline
+```
+
+Now you are able to decide which records you want to password protect.
+
+Please note you have to provide a _redirect page_ in the configuration of the __extension__.  
+You have to create this page on your own, but you can use the `login.twig` template provided by of this theme.
+
+Password protected records are emphasized by a lock symbol 🔒 in listings and the record-page itself.
 
 ### Favicon
 
