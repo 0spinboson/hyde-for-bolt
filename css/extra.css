@@ -231,16 +231,25 @@ input:focus {
     outline: 0;
 }
 
-label{
-    margin-right: 10px;
+/* style forms */
+form #form{
+  display: table;
+}
+form #form > div{
+  display: table-row;
+}
+form #form > div > label,
+form #form > div > input{
+  display: table-cell;
+  margin-top: 10px;
+  padding-right: 20px;
 }
 
-fieldset{
+form fieldset{
     border: none;
     padding: 0;
 }
-
-fieldset > input.button{
+form fieldset > input.button{
     margin-top: 10px;
 }
 
