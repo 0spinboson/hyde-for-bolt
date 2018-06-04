@@ -6,33 +6,31 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
 
 ![hyde-for-bolt-01](https://user-images.githubusercontent.com/7450884/28960604-a62ac4ea-78ff-11e7-830f-5eff2b994056.png)
 
-## Contents
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Options](#options)
-
-  - [Sidebar menu](#sidebar-menu)
-  - [Sticky sidebar content](#sticky-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-
+	- [Sidebar menu](#sidebar-menu)
+	- [Sticky sidebar content](#sticky-sidebar-content)
+	- [Themes](#themes)
+	- [Reverse layout](#reverse-layout)
 - [Features](#features)
-
-  - [Password Protection](#password-protection)
-  - [Favicon](#favicon)
-  - [Custom CSS](#custom-css)
-  - [Change Labels for pager](#change-labels-for-pager)
-  - [Optional display of teaserimage in main article](#optional-display-of-teaserimage-in-main-article)
-  - [Galleries](#galleries)
-  - [GPX tracks](#gpx-tracks)
-  - [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
-  - [Latest posts](#latest-posts)
-  - [Archive template](#archive-template)
-  - [Prevent listing](#prevent-listing)
-  - [Code highlighting](#code-highlighting)
-  - [Maintenance Text](#maintenance-text)
-  - [Copyright notice](#copyright-notice)
-
+	- [Password Protection](#password-protection)
+	- [Favicon](#favicon)
+	- [Custom CSS](#custom-css)
+	- [Change Labels for pager](#change-labels-for-pager)
+	- [Optional display of teaserimage in main article](#optional-display-of-teaserimage-in-main-article)
+	- [Galleries](#galleries)
+	- [GPX tracks](#gpx-tracks)
+	- [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
+	- [Latest posts](#latest-posts)
+	- [Archive template](#archive-template)
+	- [Prevent listing](#prevent-listing)
+	- [Code highlighting](#code-highlighting)
+	- [Maintenance text](#maintenance-text)
+	- [Copyright notice](#copyright-notice)
 - [License](#license)
+
+<!-- /TOC -->
 
 ## Options
 
