@@ -6,6 +6,8 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
 
 ![hyde-for-bolt-01](https://user-images.githubusercontent.com/7450884/28960604-a62ac4ea-78ff-11e7-830f-5eff2b994056.png)
 
+---
+
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Options](#options)
