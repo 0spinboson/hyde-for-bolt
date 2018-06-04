@@ -5,22 +5,22 @@
         {# 'prev' #}
         {% if pager.current > 1 and class != "narrow" %}
             <a href="{{link}}{{pager.current-1}}" rel="noindex, follow" class="pagination-item">
-                &#8592;
+                {{ theme.label_newer }}
             </a>
         {% else %}
             <span class="pagination-item">
-                &#8592;
+                {{ theme.label_newer }}
             </span>
         {% endif %}
 
         {# 'next' #}
         {% if pager.current < pager.totalpages and class != "narrow" %}
             <a href="{{link}}{{pager.current+1}}" rel="noindex, follow" class="pagination-item">
-                &#8594;
+                {{ theme.label_older }}
             </a>
         {% else %}
             <span class="pagination-item">
-                &#8594;
+                {{ theme.label_older }}
             </span>
         {% endif %}
     </div>

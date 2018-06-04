@@ -33,6 +33,10 @@ reverse_layout:            false
 # for previews of all supported themes
 highlight_theme:           'dracula'
 
+# labels for next and previous buttons can be modified here
+label_older:                'Older'
+label_newer:                'Newer'
+
 # Aliases can be set to restrict images to a specific set of available
 # resolutions or to decouple image sizes from template files.
 thumbnails:
