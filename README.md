@@ -20,6 +20,7 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
   - [Password Protection](#password-protection)
   - [Favicon](#favicon)
   - [Custom CSS](#custom-css)
+  - [Change Labels for pager](#change-labels-for-pager)
   - [Optional display of teaserimage in main article](#optional-display-of-teaserimage-in-main-article)
   - [Galleries](#galleries)
   - [GPX tracks](#gpx-tracks)
@@ -118,6 +119,10 @@ a{
     color: red;
 }
 ```
+
+### Change Labels for pager
+
+The labels for _Newer_ and _Older_ Buttons in Listings can be changed in `theme.yml`.
 
 ### Optional display of teaserimage in main article
 
