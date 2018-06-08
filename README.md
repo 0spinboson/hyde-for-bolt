@@ -12,24 +12,24 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
 
 - [Options](#options)
 	- [Sidebar menu](#sidebar-menu)
-	- [Sticky sidebar content](#sticky-sidebar-content)
-	- [Themes](#themes)
 	- [Reverse layout](#reverse-layout)
+	- [Themes](#themes)
+	- [Sticky sidebar content](#sticky-sidebar-content)
 - [Features](#features)
-	- [Password Protection](#password-protection)
 	- [Favicon](#favicon)
 	- [Custom CSS](#custom-css)
 	- [Change Labels for pager](#change-labels-for-pager)
 	- [Optional display of teaserimage in main article](#optional-display-of-teaserimage-in-main-article)
 	- [Galleries](#galleries)
 	- [GPX tracks](#gpx-tracks)
-	- [Optional publishing date and taxonomies](#optional-publishing-date-and-taxonomies)
-	- [Latest posts](#latest-posts)
+	- [Code highlighting](#code-highlighting)
+	- [Copyright notice](#copyright-notice)
+	- [Optional publishing of date and taxonomies](#optional-publishing-of-date-and-taxonomies)
+	- [Latest posts template](#latest-posts-template)
 	- [Archive template](#archive-template)
 	- [Prevent listing](#prevent-listing)
-	- [Code highlighting](#code-highlighting)
 	- [Maintenance text](#maintenance-text)
-	- [Copyright notice](#copyright-notice)
+	- [Password Protection Extension](#password-protection-extension)
 - [License](#license)
 
 <!-- /TOC -->
@@ -63,9 +63,9 @@ main:
 
 You can show a copyright notice for your site at the bottom of the sidebar, to enable it set `show_copyright_in_sidebar: true` in `theme.yml`.
 
-### Sticky sidebar content
+### Reverse layout
 
-By default Hyde for Bolt ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by setting `sticky_sidebar: false` in `theme.yml`.
+Hyde for Bolt's page orientation can be reversed by setting `reverse_layout: true` in `theme.yml`.
 
 ### Themes
 
@@ -75,30 +75,12 @@ Hyde for Bolt ships with eight optional themes based on the [base16 color scheme
 
 To use a theme, uncomment the related line in `theme.yml` to set the `color_theme` variable to the right value.
 
-### Reverse layout
+### Sticky sidebar content
 
-Hyde for Bolt's page orientation can be reversed by setting `reverse_layout: true` in `theme.yml`.
+By default Hyde for Bolt ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by setting `sticky_sidebar: false` in `theme.yml`.
+
 
 ## Features
-
-### Password Protection
-
-The theme supports the [PasswordProtect extension by Bob den Otter](https://github.com/bobdenotter/PasswordProtect).  
-To use it, just add the following new `field` to the `fields` of the ContentType you want to protect:
-```
-use_password_protection:
-            type: checkbox
-            default: false
-            label: 'Use the password protection provided by the PasswordProtect extension'
-            variant: inline
-```
-
-Now you are able to decide which records you want to password protect.
-
-Please note you have to provide a _redirect page_ in the configuration of the __extension__.  
-You have to create this page on your own, but you can use the `login.twig` template provided by of this theme.
-
-Password protected records are emphasized by a lock symbol 🔒 in listings and the record-page itself.
 
 ### Favicon
 
@@ -140,7 +122,15 @@ If you regularly publish gpx tracks with your posts, you can add a field `gpx` w
 
 The map is created using [leaflet](http://leafletjs.com/) and [leaflet-gpx](https://github.com/mpetazzoni/leaflet-gpx) and uses maptiles from the [Open Street Map Project](https://www.openstreetmap.org), some symbols from [Font Awesome](http://fontawesome.io/) are used in the footer to indicate distance, duration and elevations of your track.
 
-### Optional publishing date and taxonomies
+### Code highlighting
+
+Code blocks are highlighted using [highlight.js](https://highlightjs.org/), the theme used for highlighting can be defined in `theme.yml` by setting the `highlight_theme` variable (use only lowercase!), see the [highlight.js demo page](https://highlightjs.org/static/demo/) for previews of the different themes.
+
+### Copyright notice
+
+If you regularly use content which needs a copyright notice, just add a field `copyright` with `type: html` or `type:markdown` to your ContentType. The notice will be added below your content, and below the gallery (if there is one).
+
+### Optional publishing of date and taxonomies
 
 You can define for which ContentTypes the publishing date will be displayed by adding `show_publishdate: true` to your ContentTypes values in `config://contenttypes.yml`. Typically you don't want to show the publishdate for pages.
 
@@ -148,7 +138,7 @@ Display of taxonomies can be controlled via adding a corresponding value, e.g. `
 
 Both rules apply for listings as well as the display of the documents.
 
-### Latest posts
+### Latest posts template
 
 You can use the template `latest.twig`
 (see [Bolt Docs](https://docs.bolt.cm/3.3/fields/templateselect)) to include
@@ -175,17 +165,28 @@ This can be useful for ContentTypes that should not be listable (e.g. pages).
 Unfortunately there seems to be no build-in parameter to _forbid_ listings for a
 certain ContentType.
 
-### Code highlighting
-
-Code blocks are highlighted using [highlight.js](https://highlightjs.org/), the theme used for highlighting can be defined in `theme.yml` by setting the `highlight_theme` variable (use only lowercase!), see the [highlight.js demo page](https://highlightjs.org/static/demo/) for previews of the different themes.
-
 ### Maintenance text
 
 To set an individual title and content of your Maintenance-Site, just create `block/maintenance` (it has to have exactly this slug) and set title and content there.
 
-### Copyright notice
+### Password Protection Extension
 
-If you regularly use content which needs a copyright notice, just add a field `copyright` with `type: html` or `type:markdown` to your ContentType. The notice will be added below your content, and below the gallery (if there is one).
+The theme supports the [PasswordProtect extension by Bob den Otter](https://github.com/bobdenotter/PasswordProtect).  
+To use it, just add the following new `field` to the `fields` of the ContentType you want to protect:
+```
+use_password_protection:
+            type: checkbox
+            default: false
+            label: 'Use the password protection provided by the PasswordProtect extension'
+            variant: inline
+```
+
+Now you are able to decide which records you want to password protect.
+
+Please note you have to provide a _redirect page_ in the configuration of the __extension__.  
+You have to create this page on your own, but you can use the `login.twig` template provided by of this theme.
+
+Password protected records are emphasized by a lock symbol 🔒 in listings and the record-page itself.
 
 ## License
 
