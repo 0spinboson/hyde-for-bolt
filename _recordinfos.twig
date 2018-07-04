@@ -26,6 +26,9 @@
 {% if record.use_password_protection %}
     <span>🔒</span>
 {% endif %}
+{% if record.gpx %}
+    <span>&#128506;</span>
+{% endif %}
 
 {% if extended | default() %}
     -

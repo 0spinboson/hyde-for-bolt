@@ -122,6 +122,8 @@ If you regularly publish gpx tracks with your posts, you can add a field `gpx` w
 
 The map is created using [leaflet](http://leafletjs.com/) and [leaflet-gpx](https://github.com/mpetazzoni/leaflet-gpx) and uses maptiles from the [Open Street Map Project](https://www.openstreetmap.org), some symbols from [Font Awesome](http://fontawesome.io/) are used in the footer to indicate distance, duration and elevations of your track.
 
+Records with gpx-tracks are emphasized by a map symbol (&#128506; ) in listings and the record-page itself.
+
 ### Code highlighting
 
 Code blocks are highlighted using [highlight.js](https://highlightjs.org/), the theme used for highlighting can be defined in `theme.yml` by setting the `highlight_theme` variable (use only lowercase!), see the [highlight.js demo page](https://highlightjs.org/static/demo/) for previews of the different themes.
@@ -186,7 +188,7 @@ Now you are able to decide which records you want to password protect.
 Please note you have to provide a _redirect page_ in the configuration of the __extension__.  
 You have to create this page on your own, but you can use the `login.twig` template provided by of this theme.
 
-Password protected records are emphasized by a lock symbol 🔒 in listings and the record-page itself.
+Password protected records are emphasized by a lock symbol (🔒 ) in listings and the record-page itself.
 
 ## License
 
