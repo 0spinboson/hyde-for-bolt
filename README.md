@@ -1,8 +1,10 @@
 # Hyde Theme for Bolt CMS
 
-Hyde is a brazen two-column theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler. Both created by [Mark Otto](https://github.com/mdo).
+Hyde is a brazen two-column theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler. Both created by [Mark Otto](https://github.com/mdo). In some places [Font Awesome](https://fontawesome.com/v4.7.0/) was used for icons.
 
 This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
+
+
 
 ![hyde-for-bolt-01](https://user-images.githubusercontent.com/7450884/28960604-a62ac4ea-78ff-11e7-830f-5eff2b994056.png)
 
@@ -122,7 +124,7 @@ If you regularly publish gpx tracks with your posts, you can add a field `gpx` w
 
 The map is created using [leaflet](http://leafletjs.com/) and [leaflet-gpx](https://github.com/mpetazzoni/leaflet-gpx) and uses maptiles from the [Open Street Map Project](https://www.openstreetmap.org), some symbols from [Font Awesome](http://fontawesome.io/) are used in the footer to indicate distance, duration and elevations of your track.
 
-Records with gpx-tracks are emphasized by a map symbol (&#128506; ) in listings and the record-page itself.
+Records with gpx-tracks are emphasized by a map symbol in listings and the record-page itself.
 
 ### Code highlighting
 
@@ -188,7 +190,7 @@ Now you are able to decide which records you want to password protect.
 Please note you have to provide a _redirect page_ in the configuration of the __extension__.  
 You have to create this page on your own, but you can use the `login.twig` template provided by of this theme.
 
-Password protected records are emphasized by a lock symbol (🔒 ) in listings and the record-page itself.
+Password protected records are emphasized by a lock symbol in listings and the record-page itself.
 
 ## License
 
