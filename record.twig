@@ -37,7 +37,9 @@
 
             {% if record.copyright and record.copyright != "" %}
                 <dl class="copyright">
-                    <dt>©</dt>
+                    <dt>
+                        <i class="fa fa-copyright"></i>
+                    </dt>
                     <dd>
                         {{ record.copyright|markdown }}
                     </dd>
