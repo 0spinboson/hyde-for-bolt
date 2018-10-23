@@ -3,7 +3,14 @@
 {% block content %}
     {# the first thing is to check if this record shall be password protected #}
     {% if record.use_password_protection %}
-        {{ passwordprotect() }}
+        {% if app.extensions.get('Bobdenotter/PasswordProtect') is not null %}
+            {{ include(template_from_string("{{ passwordprotect() }}")) }}
+        {% else %}
+            <p class="warning">
+              Warning: This theme suggests you install the 'Bobdenotter/PasswordProtect' extension.
+              Otherwise the password protection will not work!
+            </p>
+        {% endif %}
     {% endif %}
     <div class="post">
         <h1 class="post-title">

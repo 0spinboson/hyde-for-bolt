@@ -292,3 +292,12 @@ form fieldset > input.button{
 a.pagination-item:hover{
     text-decoration: none;
 }
+
+/* highlight warning */
+.warning {
+    border: 1px solid #F99;
+    background-color: #FDD;
+    font-weight: bold;
+    color: #600;
+    padding: 4px 8px;
+}
