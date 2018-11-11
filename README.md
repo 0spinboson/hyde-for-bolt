@@ -140,9 +140,17 @@ If you regularly use content which needs a copyright notice, just add a field `c
 
 ### Optional publishing of date and taxonomies
 
-You can define for which ContentTypes the publishing date will be displayed by adding `show_publishdate: true` to your ContentTypes values in `config://contenttypes.yml`. Typically you don't want to show the publishdate for pages.
+You can define for which ContentTypes the publishing date will be displayed by
+adding `show_publishdate: true` to your ContentTypes values in
+`config://contenttypes.yml`.
+Typically you don't want to show the _publishdate_ for pages.
 
-Display of taxonomies can be controlled via adding a corresponding value, e.g. `shown_taxonomies: [ categories, tags ]` to your ContentType definition. Hereby it is possible to use some taxonomies internally but not showing them to your visitors. Tags will be prefixed with a hash #, categories will be prefixed with an @.
+Display of taxonomies can also be controlled via ContentType definition.
+If you dont want taxonomy `tags` to be shown, just add
+`hidden_taxonomy: [ tags ]` to your ContentType definition.
+Hereby it is possible to use some taxonomies internally but not showing them to
+your visitors.
+Tags will be prefixed with a hash #, categories will be prefixed with an @.
 
 Both rules apply for listings as well as the display of the documents.
 

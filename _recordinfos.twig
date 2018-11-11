@@ -8,7 +8,7 @@
 
 {% if record.taxonomy is defined %}
     {% for type, values in record.taxonomy %}
-        {% if type in record.contenttype.shown_taxonomy %}
+        {% if type not in record.contenttype.hidden_taxonomy %}
             {% set prefix = type == "tags"
                 ? '#'
                 : type == "categories"
