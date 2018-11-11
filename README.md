@@ -93,14 +93,14 @@ Just add a `favicon.png` with at least size of 180px*180px at the top level of y
 You can upload your own CSS-file to change some small things.
 The file has to be named `custom.css` and be placed in the top level of your files-directory.
 
-__Note:__ this is only working if the `css` is provided with the correct Content-Type,
-a [Pull Request to the Bolt CMS repo](https://github.com/bolt/bolt/pull/6964) was created, please check if it was accepted
-or add the necessary change to your installation of Bolt if you want to use this feature.
-
-A typical `custom.css` (to change the color for links) can be:
+An example use of the `custom.css` is to change or add the prefix of taxonomy-links
+in the header-section of record-pages. By default `tags` will be prefixed with a
+hash #, `categories` will be prefixed with an @.  
+Each taxonomy-link is being supplemented by its taxonomy-name as class name, so
+to change the prefix of all tags to ♥ you could add the following to your `custom.css`:
 ```css
-a{
-    color: red;
+span.taxonomies a.tags::before{
+	content: '♥' !important;
 }
 ```
 
@@ -150,7 +150,7 @@ If you dont want taxonomy `tags` to be shown, just add
 `hidden_taxonomy: [ tags ]` to your ContentType definition.
 Hereby it is possible to use some taxonomies internally but not showing them to
 your visitors.
-Tags will be prefixed with a hash #, categories will be prefixed with an @.
+By default tags will be prefixed with a hash #, categories will be prefixed with an @ - this can be changed by using a `custom.css`, see above.
 
 Both rules apply for listings as well as the display of the documents.
 

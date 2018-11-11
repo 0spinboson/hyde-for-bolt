@@ -301,3 +301,11 @@ a.pagination-item:hover{
     color: #600;
     padding: 4px 8px;
 }
+
+/* prefixes for tags and categories */
+span.taxonomies a.tags::before {
+    content: "#";
+}
+span.taxonomies a.categories::before {
+    content: "@";
+}
