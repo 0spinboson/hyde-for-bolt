@@ -29,10 +29,6 @@ reverse_layout:            false
 #color_theme:              'base-0e'
 #color_theme:              'base-0f'
 
-# theme for highlingthing code blocks, see https://highlightjs.org/static/demo/
-# for previews of all supported themes
-highlight_theme:           'dracula'
-
 # labels for next and previous buttons can be modified here
 label_older:                'Older'
 label_newer:                'Newer'

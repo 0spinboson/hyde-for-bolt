@@ -128,7 +128,11 @@ Records with gpx-tracks are emphasized by a map symbol in listings and the recor
 
 ### Code highlighting
 
-Code blocks are highlighted using [highlight.js](https://highlightjs.org/), the theme used for highlighting can be defined in `theme.yml` by setting the `highlight_theme` variable (use only lowercase!), see the [highlight.js demo page](https://highlightjs.org/static/demo/) for previews of the different themes.
+Code blocks are highlighted using [highlight.js](https://highlightjs.org/), the
+theme used for highlighting can be defined in your `config.yml` via the parameter
+`highlight_theme` (use only lowercase, eg: `highlight_theme: dracula`), see the
+[highlight.js demo page](https://highlightjs.org/static/demo/) for previews of
+the different themes.
 
 ### Copyright notice
 
