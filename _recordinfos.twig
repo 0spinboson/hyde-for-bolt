@@ -2,7 +2,7 @@
 
 {# show publishing date for certain contenttypes
    can be defined in theme.yml #}
-{% if record.contenttype.show_publish_date %}
+{% if not record.contenttype.hide_publish_date %}
     {{ record.datepublish|localedatetime("%d.%m.%Y") }}
 {% endif %}
 

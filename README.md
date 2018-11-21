@@ -140,8 +140,8 @@ If you regularly use content which needs a copyright notice, just add a field `c
 
 ### Optional publishing of date and taxonomies
 
-You can define for which ContentTypes the publishing date will be displayed by
-adding `show_publishdate: true` to your ContentTypes values in
+You can define for which ContentTypes the publishing date will be hidden by
+adding `hide_publish_date: true` to your ContentTypes values in
 `config://contenttypes.yml`.
 Typically you don't want to show the _publishdate_ for pages.
 
@@ -152,7 +152,7 @@ Hereby it is possible to use some taxonomies internally but not showing them to
 your visitors.
 By default tags will be prefixed with a hash #, categories will be prefixed with an @ - this can be changed by using a `custom.css`, see above.
 
-Both rules apply for listings as well as the display of the documents.
+Both rules apply for listings as well as the display of the documents itself.
 
 ### Latest posts template
 
