@@ -26,7 +26,7 @@ a.readmore,
 .post-date a,
 .post-date span,
 .post-date i {
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 a:hover.readmore {

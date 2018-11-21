@@ -3,7 +3,9 @@
 {# show publishing date for certain contenttypes
    can be defined in theme.yml #}
 {% if not record.contenttype.hide_publish_date %}
+  <span>
     {{ record.datepublish|localedatetime("%d.%m.%Y") }}
+  </span>
 {% endif %}
 
 {% if record.taxonomy is defined %}
