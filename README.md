@@ -5,13 +5,12 @@ Hyde is a brazen two-column theme that pairs a prominent sidebar with uncomplica
 This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
 
 
-
 ![hyde-for-bolt-01](https://user-images.githubusercontent.com/7450884/28960604-a62ac4ea-78ff-11e7-830f-5eff2b994056.png)
 
----
 
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [Static Demo](#static-demo)
 - [Options](#options)
 	- [Sidebar menu](#sidebar-menu)
 	- [Reverse layout](#reverse-layout)
@@ -36,6 +35,10 @@ This is the [Bolt CMS](http://bolt.cm/) adaption of the theme.
 - [License](#license)
 
 <!-- /TOC -->
+
+## Static Demo
+
+A static demo of the theme can be found [here](https://znegva.github.io/bolt_themes_static_pages/hyde-for-bolt/index.html).
 
 ## Options
 
