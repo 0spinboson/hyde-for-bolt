@@ -1,8 +1,8 @@
 {# This file is inserted as the 'info' of each listed record and inside the record #}
 
-{# show publishing date for certain contenttypes
-   can be defined in theme.yml #}
-{% if not record.contenttype.hide_publish_date %}
+{# hide publishing date for certain contenttypes
+   can be defined in config.yml #}
+{% if record.contenttype.hide_publish_date is not defined or record.contenttype.hide_publish_date is sameas(false) %}
   <span>
     {{ record.datepublish|localedatetime("%d.%m.%Y") }}
   </span>

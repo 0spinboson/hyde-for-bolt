@@ -42,6 +42,8 @@ A static demo of the theme can be found [here](https://znegva.github.io/bolt_the
 
 ## Options
 
+Please make sure `strict_variables: false` is set/uncommented in your `config.yml` if you get Twig Exceptions.
+
 Hyde for Bolt includes some customizable options, typically applied via `theme.yml` file.
 
 ### Sidebar menu

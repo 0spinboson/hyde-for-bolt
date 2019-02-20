@@ -3,7 +3,7 @@
 
     {{ include('partials/_head.twig') }}
 
-    <body class="theme-{{ theme.color_theme }}
+    <body class="theme-{{ theme.color_theme|default('default') }}
         {% if theme.reverse_layout %}layout-reverse{% endif %}">
 
         {{ include('partials/_sidebar.twig') }}

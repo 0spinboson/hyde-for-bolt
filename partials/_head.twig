@@ -51,13 +51,15 @@
     {% endif %}
 
     <!-- CEO -->
-    {% set keywords = record.title %}
-    {% for c in record.taxonomy.categories %}
-        {% set keywords = keywords ~ ', ' ~ c %}
-    {% endfor %}
-    {% for c in record.taxonomy.tags %}
-        {% set keywords = keywords ~ ', ' ~ c %}
-    {% endfor %}
+    {% set keywords = record.title|escape %}
+    {% if (record is defined) and (record.taxonomy is not null) %}
+        {% for c in record.taxonomy.categories %}
+            {% set keywords = keywords ~ ', ' ~ c %}
+        {% endfor %}
+        {% for c in record.taxonomy.tags %}
+            {% set keywords = keywords ~ ', ' ~ c %}
+        {% endfor %}
+    {% endif %}
     <meta name="keywords" content="{{ keywords }}">
 
     <meta property="og:site_name" content="{{ app.config.get('general/sitename') }}">
