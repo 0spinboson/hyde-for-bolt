@@ -62,7 +62,7 @@
                         {{ record.teaser }}
                     {% else %}
                         <span>
-                            {{ record.excerpt(250, false, search|default('')) }}
+                            {{ (record.body ~ record.content)|excerpt(250, false, search|default('')) }}
                         </span>
                     {% endif %}
                 </a>
