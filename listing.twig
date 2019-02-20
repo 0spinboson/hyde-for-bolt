@@ -1,4 +1,4 @@
-{% extends '_master.twig' %}
+{% extends 'partials/_master.twig' %}
 
 {% block content %}
 
@@ -46,7 +46,7 @@
 
             {% block recordinfos %}
                 <span class="post-date">
-                    {% include('_recordinfos.twig') %}
+                    {% include('partials/_recordinfos.twig') %}
                 </span>
             {% endblock recordinfos %}
 
@@ -82,6 +82,6 @@
     {% endfor %}
 
     {# If there are more records than will fit on one page, the pager is shown. #}
-    {{ pager(template = '_pager.twig') }}
+    {{ pager(template = 'partials/_pager.twig') }}
 
 {% endblock content %}

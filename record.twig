@@ -1,4 +1,4 @@
-{% extends '_master.twig' %}
+{% extends 'partials/_master.twig' %}
 
 {% block content %}
     {# the first thing is to check if this record shall be password protected #}
@@ -18,7 +18,7 @@
         </h1>
         {% block recordinfos %}
             <span class="post-date">
-                {% include('_recordinfos.twig') %}
+                {% include('partials/_recordinfos.twig') %}
             </span>
         {% endblock recordinfos %}
 
@@ -41,11 +41,11 @@
             {% endif %}
 
             {% if record.gpx %}
-                {% include('_gpx.twig') %}
+                {% include('partials/_gpx.twig') %}
             {% endif %}
 
             {% if record.gallery %}
-                {% include('_gallery.twig') %}
+                {% include('partials/_gallery.twig') %}
             {% endif %}
 
             {% if record.copyright and record.copyright != "" %}

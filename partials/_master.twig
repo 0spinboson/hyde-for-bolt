@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ htmllang() }}">
 
-    {{ include('_head.twig') }}
+    {{ include('partials/_head.twig') }}
 
     <body class="theme-{{ theme.color_theme }}
         {% if theme.reverse_layout %}layout-reverse{% endif %}">
 
-        {{ include('_sidebar.twig') }}
+        {{ include('partials/_sidebar.twig') }}
 
         <div class="content container">
             {% block content %}{% endblock %}
