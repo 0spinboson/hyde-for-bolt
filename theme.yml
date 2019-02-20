@@ -9,8 +9,8 @@
 # homepage_template:       index.twig
 # record_template:         record.twig
 # listing_template:        listing.twig
-# search_results_template: search.twig
-# notfound:                notfound.twig
+# search_results_template: listing.twig
+# notfound:                record.twig
 
 # shall the copyright notice be shown on sidebar?
 show_copyright_in_sidebar: false

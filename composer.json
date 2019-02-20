@@ -1,0 +1,30 @@
+{
+  "name": "znegva/bolt-theme-hyde",
+  "description": "Hyde is a brazen two-column theme that pairs a prominent sidebar with uncomplicated content",
+  "type": "bolt-theme",
+  "keywords": [
+    "sidebar",
+    "two-column",
+    "responsive",
+    "simple",
+    "clean",
+    "gpx",
+    "gallery"
+  ],
+  "require": {
+    "bolt/bolt": "^3.4"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Martin Kausche",
+      "email": "i.dont.like@spam.org"
+    }
+  ],
+  "extra": {
+    "bolt-icon": "images/favicon.png",
+    "bolt-screenshots": [
+      "images/screenshot.png"
+    ]
+  }
+}
